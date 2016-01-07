@@ -17,10 +17,11 @@ Pod::Spec.new do |spec|
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'Raphael Schaad' => 'raphael.schaad@gmail.com' }
   spec.social_media_url = 'https://twitter.com/raphaelschaad'
-  spec.platform         = :ios, '6.0'
+  spec.platform         = :ios, '8.0'
   spec.source           = { :git => 'https://github.com/smyrgl/FLAnimatedImage.git', :tag => '1.0.8' }
   spec.frameworks       = 'QuartzCore', 'ImageIO', 'MobileCoreServices', 'CoreGraphics'
   spec.requires_arc     = true
   spec.source_files     = "FLAnimatedImageDemo/FLAnimatedImage/**/*.{h,m}"
+  spec.dependency 'libwebp', '~> 0.4.3'
 
 end
