@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
                         - Behaves gracefully under memory pressure
                         - Eliminates delays or blocking during the first playback loop
                         - Interprets the frame delays of fast GIFs the same way modern browsers do
-                        
+
                         It's a well-tested [component that powers all GIFs in Flipboard](http://engineering.flipboard.com/2014/05/animated-gif/).
                         DESC
 
@@ -21,19 +21,6 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => 'https://github.com/smyrgl/FLAnimatedImage.git', :tag => '1.0.8' }
   spec.frameworks       = 'QuartzCore', 'ImageIO', 'MobileCoreServices', 'CoreGraphics'
   spec.requires_arc     = true
+  spec.source_files     = "FLAnimatedImageDemo/FLAnimatedImage/**/*.{h,m}"
 
-  spec.subspec 'Core' do |subspec|
-    subspec.source_files     = 'FLAnimatedImageDemo/FLAnimatedImage/Core/**/*.{h.m}'
-  end
-
-  spec.subspec 'GIF' do |subspec|
-    subspec.source_files     = 'FLAnimatedImageDemo/FLAnimatedImage/GIF/**/*.{h.m}'
-  end
-
-  spec.subspec 'WebP' do |subspec|
-    subspec.source_files     = 'FLAnimatedImageDemo/FLAnimatedImage/WebP/**/*.{h.m}'
-  end
-
-  spec.default_subspecs      = 'Core', 'GIF'
 end
-
